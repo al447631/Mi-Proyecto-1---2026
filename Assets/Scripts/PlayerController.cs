@@ -5,6 +5,7 @@ public class PlayerController : MonoBehaviour
 {
     
     [SerializeField] private float velocidad = 5f;
+    [SerializeField] private float potenciaSalto = 7f;
     private Vector2 direccionMovimiento;
     private Rigidbody2D rb;
     private SpriteRenderer sprite;
@@ -19,6 +20,13 @@ public class PlayerController : MonoBehaviour
     {
         direccionMovimiento = value.Get<Vector2>();
     }
+    public void OnJump (InputValue value)
+    {
+        if (value.isPressed)
+        {
+            rb.linearVelocity = new Vector2(rb.linearVelocityX, potenciaSalto);
+        }
+    }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -30,7 +38,7 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         //Para que se mueva el jugador
-        rb.linearVelocity = direccionMovimiento * velocidad;
+        rb.linearVelocity = new Vector2(direccionMovimiento.x*velocidad, rb.linearVelocity.y);
 
         //Girar Sprite
         if(direccionMovimiento.x > 0 && sprite.flipX)
@@ -41,7 +49,7 @@ public class PlayerController : MonoBehaviour
         {
             if(direccionMovimiento.x < 0 && !sprite.flipX)
             {
-                sprite.flipX = true;
+                sprite.flipX = true; //Izquierda
             }
         }
     }
