@@ -25,18 +25,9 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Agacharse",
+                    "name": "Shoot",
                     "type": "Button",
-                    "id": "7171a50f-5ebb-41ad-a3af-b90d573960b3",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "Agacharse1",
-                    "type": "Button",
-                    "id": "4f6fed6e-d289-462f-a41c-89fa4bf15e42",
+                    "id": "f358fc33-b797-46e0-ada8-6b58a0e271b0",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -134,23 +125,12 @@
                 },
                 {
                     "name": "",
-                    "id": "8bf91628-2243-4c57-9be6-c5a8f702bd68",
-                    "path": "<Keyboard>/s",
+                    "id": "ee2cc605-1901-4471-bc16-2b85f701ef67",
+                    "path": "<Mouse>/leftButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Agacharse",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "28ad8bf5-6679-4c96-ba2d-2926f27711df",
-                    "path": "<Keyboard>/downArrow",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Agacharse1",
+                    "action": "Shoot",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

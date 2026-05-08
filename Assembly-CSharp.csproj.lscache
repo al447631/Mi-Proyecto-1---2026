@@ -53,6 +53,7 @@ TemporaryDependencyNodeTargetIdentifier=netstandard2.1
 Assets/Scripts/
  MenuController.cs
  PlayerController.cs
+ Proyectil.cs
 Temp/obj/Assembly-CSharp/.NETStandard,Version=v2.1.AssemblyAttributes.cs
 
 [metadataReferences]
