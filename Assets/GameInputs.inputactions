@@ -23,6 +23,24 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "Agacharse",
+                    "type": "Button",
+                    "id": "7171a50f-5ebb-41ad-a3af-b90d573960b3",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Agacharse1",
+                    "type": "Button",
+                    "id": "4f6fed6e-d289-462f-a41c-89fa4bf15e42",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -113,6 +131,28 @@
                     "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "8bf91628-2243-4c57-9be6-c5a8f702bd68",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Agacharse",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "28ad8bf5-6679-4c96-ba2d-2926f27711df",
+                    "path": "<Keyboard>/downArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Agacharse1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }
