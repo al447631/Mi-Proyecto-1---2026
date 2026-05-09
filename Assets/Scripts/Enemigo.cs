@@ -55,7 +55,18 @@ public class Enemigo : MonoBehaviour
 
             if (vida <= 0)
             {
-                Destroy(gameObject); // 
+                if (esVolador)
+                {
+                    GestorPuntuacion.Instancia.SumarPuntos(10);
+                    Destroy(gameObject);
+                }
+
+                else
+                {
+                    GestorPuntuacion.Instancia.SumarPuntos(20);
+                    Destroy(gameObject); 
+                }
+               
             }
         }
         // 2. Pj

@@ -544,6 +544,51 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &1068339970
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1068339972}
+  - component: {fileID: 1068339971}
+  m_Layer: 0
+  m_Name: Gestor Puntuacion
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1068339971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1068339970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae87471d17dfd994386c85621eaaf185, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GestorPuntuacion
+  uiDocument: {fileID: 636276391}
+--- !u!4 &1068339972
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1068339970}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.45463, y: -0.3834, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1544920390
 GameObject:
   m_ObjectHideFlags: 0
@@ -751,7 +796,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 2
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -1071,11 +1116,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3085300199246513724, guid: d35e34df2bcc3c240a683c3178e1384a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10.54
+      value: -13.16
       objectReference: {fileID: 0}
     - target: {fileID: 3085300199246513724, guid: d35e34df2bcc3c240a683c3178e1384a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.38
+      value: -6.69
       objectReference: {fileID: 0}
     - target: {fileID: 3085300199246513724, guid: d35e34df2bcc3c240a683c3178e1384a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1188,6 +1233,7 @@ SceneRoots:
   - {fileID: 1544920393}
   - {fileID: 1850192694}
   - {fileID: 1765927122243544599}
-  - {fileID: 636276392}
   - {fileID: 548535614326527716}
   - {fileID: 4241620112618482280}
+  - {fileID: 636276392}
+  - {fileID: 1068339972}
