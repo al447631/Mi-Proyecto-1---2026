@@ -5,6 +5,10 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float velocidad = 5f;
     [SerializeField] private float potenciaSalto = 7f;
+    //Delay para Disparos
+    public float tiempoEntreDisparos = 1f; 
+    private float proximoDisparo = 0f;
+    //
     [SerializeField] private LayerMask capaSuelo; // Detectar suelo
     [SerializeField] private Transform controladorSuelo; 
     [SerializeField] private Vector2 dimensionesCaja = new Vector2(0.8f, 0.2f);
@@ -43,16 +47,21 @@ public class PlayerController : MonoBehaviour
     {
     if (value.isPressed)
         {
-            anim.SetTrigger("Shoot");
+            if (Time.time >= proximoDisparo)
+            {
+                // 1. Calculamos cuándo será el próximo disparo permitido
+                proximoDisparo = Time.time + tiempoEntreDisparos;
+                anim.SetTrigger("Shoot");
 
-            // Direccion Visual del PJ
-            float direccionDisparo = sprite.flipX ? -180f : 0f;
-            
-            // Rotacion punto disparo
-            firePoint.rotation = Quaternion.Euler(0, 0, direccionDisparo);
+                // Direccion Visual del PJ
+                float direccionDisparo = sprite.flipX ? -180f : 0f;
+                
+                // Rotacion punto disparo
+                firePoint.rotation = Quaternion.Euler(0, 0, direccionDisparo);
 
-            // Creador proyectil
-            Instantiate(ArmaPrefab, firePoint.position, firePoint.rotation);
+                // Creador proyectil
+                Instantiate(ArmaPrefab, firePoint.position, firePoint.rotation);
+            }
         }
     
     }

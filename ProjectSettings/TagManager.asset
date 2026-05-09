@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 3
   tags:
   - Arma
+  - Suelo
+  - Basura
   layers:
   - Default
   - TransparentFX
