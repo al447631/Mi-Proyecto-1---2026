@@ -7,6 +7,9 @@ public class Enemigo : MonoBehaviour
     public float velocidad = 3f;
     public bool esVolador = false; // Diferemciar Enemigo Volador
 
+    public float rangoVision = 6f;
+    private bool sidoVisto = false;
+
     private Transform jugador; //Saber donde esta el PJ
     private SpriteRenderer spriteR;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -27,20 +30,31 @@ public class Enemigo : MonoBehaviour
     {
         if (jugador != null)
         {
-            if (esVolador)
-            {
-                // Enemigo Volador (EJE x e y)
-                transform.position = Vector2.MoveTowards(transform.position, jugador.position, velocidad * Time.deltaTime);
-            }
-            else
-            {
-                // Enemigo Suelo (EJE X)
-                Vector2 objetivoSuelo = new Vector2(jugador.position.x, transform.position.y);
-                transform.position = Vector2.MoveTowards(transform.position, objetivoSuelo, velocidad * Time.deltaTime);
-            }
+            float distancia = Vector2.Distance(transform.position,jugador.position);
 
-            // Girar Sprite
-            spriteR.flipX = jugador.position.x > transform.position.x;
+            if(distancia <= rangoVision)
+            {
+                sidoVisto = true;
+            }
+            if (sidoVisto)
+            {
+                
+            
+                if (esVolador)
+                {
+                    // Enemigo Volador (EJE x e y)
+                    transform.position = Vector2.MoveTowards(transform.position, jugador.position, velocidad * Time.deltaTime);
+                }
+                else
+                {
+                    // Enemigo Suelo (EJE X)
+                    Vector2 objetivoSuelo = new Vector2(jugador.position.x, transform.position.y);
+                    transform.position = Vector2.MoveTowards(transform.position, objetivoSuelo, velocidad * Time.deltaTime);
+                }
+
+                // Girar Sprite
+                spriteR.flipX = jugador.position.x > transform.position.x;
+            }
         }
     }
 

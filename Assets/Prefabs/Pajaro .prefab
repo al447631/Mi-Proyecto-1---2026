@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2846412769431390513}
   - component: {fileID: 6520761646501591276}
   - component: {fileID: 3585526546720566290}
+  - component: {fileID: 6714160276807370657}
   m_Layer: 0
   m_Name: 'Pajaro '
   m_TagString: Untagged
@@ -152,5 +153,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemigo
   vida: 30
-  velocidad: 1
+  velocidad: 4
   esVolador: 1
+  rangoVision: 25
+--- !u!95 &6714160276807370657
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7691987062094201341}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d9e40fa1e02acb94496c0feeb9837dcc, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

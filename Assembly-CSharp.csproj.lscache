@@ -51,11 +51,13 @@ TemporaryDependencyNodeTargetIdentifier=netstandard2.1
 
 [sourceFiles]
 Assets/Scripts/
+ CambioNivel1.cs
  Enemigo.cs
  GestorPuntuacion.cs
  MenuController.cs
  PlayerController.cs
  Proyectil.cs
+ SeguimientoCamara.cs
  VidaJugador.cs
 Temp/obj/Assembly-CSharp/.NETStandard,Version=v2.1.AssemblyAttributes.cs
 

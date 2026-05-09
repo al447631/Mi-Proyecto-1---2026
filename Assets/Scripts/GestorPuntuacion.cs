@@ -5,7 +5,7 @@ public class GestorPuntuacion : MonoBehaviour
 {
 
     public static GestorPuntuacion Instancia;
-    private int puntuacion = 0;
+    public static int puntuacionGlobal = 0;
     private Label textoPuntuacion;
     
     [SerializeField] private UIDocument uiDocument;
@@ -27,7 +27,7 @@ public class GestorPuntuacion : MonoBehaviour
     
     public void SumarPuntos(int puntos)
     {
-        puntuacion += puntos;
+        puntuacionGlobal += puntos;
         ActualizarTexto();
     }
 
@@ -35,7 +35,7 @@ public class GestorPuntuacion : MonoBehaviour
     {
         if (textoPuntuacion != null)
         {
-            textoPuntuacion.text = "Puntos: " + puntuacion;
+            textoPuntuacion.text = "Puntos: " + puntuacionGlobal;
         }
     }
 }
