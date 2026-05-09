@@ -51,6 +51,7 @@ TemporaryDependencyNodeTargetIdentifier=netstandard2.1
 
 [sourceFiles]
 Assets/Scripts/
+ Enemigo.cs
  MenuController.cs
  PlayerController.cs
  Proyectil.cs
