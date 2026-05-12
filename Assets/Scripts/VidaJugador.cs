@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.InputSystem;
+using Unity.VectorGraphics;
+using UnityEngine.SceneManagement;
 
 public class VidaJugador : MonoBehaviour
 {
@@ -23,7 +25,6 @@ public class VidaJugador : MonoBehaviour
         
         if (Keyboard.current != null && Keyboard.current.pKey.wasPressedThisFrame)
         {
-            Debug.Log("¡Ay! Me he quitado 10 de vida de prueba.");
             RecibirDano(10);
         }
     }
@@ -40,9 +41,13 @@ public class VidaJugador : MonoBehaviour
 
         ActualizarBarra();
 
-        if (vidaActual == 0)
+        if (vidaActual == 0 || vidaActual <= 0 )
         {
             Debug.Log("¡Has Muerto!"); 
+
+            GestorPuntuacion.puntuacionGlobal = 0;
+
+            SceneManager.LoadScene("GameOver");
         }
     }
 
